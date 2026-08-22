@@ -21,7 +21,7 @@ export default ({block}) => {
             <Button block={block} type="primary" onClick={showDrawer}>{t('panel.archive')}</Button>
             <Drawer
                 closable={{ placement: 'end' }}
-                title="存档列表" onClose={onClose} open={open} width={1200}>
+                title={t('panel.archive')} onClose={onClose} open={open} width={1200}>
                 <div>
                     <BackupList />
                 </div>

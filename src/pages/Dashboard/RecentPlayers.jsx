@@ -1,6 +1,7 @@
 import {ConfigProvider, DatePicker, Skeleton} from "antd";
 import React, {useEffect, useState} from "react";
 import {useParams} from "react-router-dom";
+import {useTranslation} from "react-i18next";
 
 import locale from 'antd/locale/zh_CN';
 import dayjs from 'dayjs';
@@ -17,6 +18,7 @@ dayjs.locale('zh-cn');
 const {RangePicker} = DatePicker;
 
 export default () => {
+    const {t} = useTranslation()
     const {cluster} = useParams()
     const [loading, setLoading] = useState(true)
     const [chartOptions, setChartOptions] = useState()
@@ -49,7 +51,7 @@ export default () => {
                 const {data} = response
                 setChartOptions({
                     title: {
-                        text: '角色占比',
+                        text: t('dashboard.roleRatio'),
                         left: 'center'
                     },
                     tooltip: {
@@ -66,7 +68,7 @@ export default () => {
                     },
                     series: [
                         {
-                            name: '角色占比',
+                            name: t('dashboard.roleRatio'),
                             type: 'pie',
                             radius: '50%',
                             data: data?.map(item => {
@@ -117,7 +119,7 @@ export default () => {
                         needConfirm
                     />
                 </div>
-                <EChartComponent options={chartOptions} title={'角色占比'}/>
+                <EChartComponent options={chartOptions} title={t('dashboard.roleRatio')}/>
             </Skeleton>
         </ConfigProvider>
     </>)

@@ -39,9 +39,9 @@ export default () => {
         deleteStepupWorkshopApi()
             .then(data => {
                 if (data.code === 200) {
-                    message.success("更新模组成功，请重启房间")
+                    message.success(t('panel.updateWorkshopMod.success'))
                 } else {
-                    message.warning("更新模组失败")
+                    message.warning(t('mod.update.error'))
                 }
                 setOpen(false)
             })
@@ -51,10 +51,10 @@ export default () => {
         <Row gutter={[16,16]}>
             <Col xs={12} sm={6} md={6} lg={6} xl={6}>
                 <Popconfirm
-                    title="请选择更新方式"
-                    description="删除并更新会清理旧文件后重新下载"
-                    okText="删除并更新"
-                    cancelText="仅更新"
+                    title={t('panel.updateGame.confirm.title')}
+                    description={t('panel.updateGame.confirm.desc')}
+                    okText={t('panel.updateGame.deleteAndUpdate')}
+                    cancelText={t('panel.updateGame.updateOnly')}
                     okButtonProps={{danger: true}}
                     onConfirm={() => updateGameOnclick(true)}
                     onCancel={() => updateGameOnclick(false)}

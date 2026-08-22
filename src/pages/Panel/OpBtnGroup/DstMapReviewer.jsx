@@ -18,7 +18,7 @@ export default ({block})=>{
             <Button block={block} type="primary" onClick={showDrawer}>{t('panel.mapReviewer')}</Button>
             <Drawer
                 closable={{ placement: 'end' }}
-                title="地图数据" onClose={onClose} open={open} width={1200}>
+                title={t('panel.mapData')} onClose={onClose} open={open} width={1200}>
                 <div>
                     <DstMapData />
                 </div>

@@ -82,7 +82,7 @@ const Begin = (props) => {
         const response = await http.post("/api/init", initData)
         const responseData = response.data
         if (responseData.code !== 200) {
-            message.error("初始化数据失败")
+            message.error(t('begin.init.error'))
             return
         }
 
@@ -90,7 +90,7 @@ const Begin = (props) => {
         const loginResponse = await http.post("/api/login", initData.userInfo)
         const loginResponseData = loginResponse.data
         if (loginResponseData.code !== 200) {
-            message.error("登录失败")
+            message.error(t('login.failed'))
             return
         }
         localStorage.setItem("token", loginResponseData.data.username)
