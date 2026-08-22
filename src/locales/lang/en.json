@@ -4,6 +4,8 @@
   "web.login": "Login",
   "login.remember.me": "Remember Password",
 
+  "begin.welcome.title": "Welcome to the Don't Starve Together Management Panel",
+
   "init.previous": "Previous",
   "init.next": "Next",
   "init.go": "Go",

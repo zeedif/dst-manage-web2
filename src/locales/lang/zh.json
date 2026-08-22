@@ -4,6 +4,8 @@
   "web.login": "登录",
   "login.remember.me": "记住密码",
 
+  "begin.welcome.title": "欢迎使用饥荒联机版管理面板",
+
   "init.previous": "上一步",
   "init.next": "下一步",
   "init.go": "完成",
