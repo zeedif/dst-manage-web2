@@ -26,6 +26,10 @@ export const ToggleLanguage = () => {
         {
             label: '한국인',
             key: 'kr'
+        },
+        {
+            label: 'Español',
+            key: 'es'
         }
     ];
     return (
