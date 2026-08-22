@@ -106,7 +106,7 @@ export default () => {
                         name="gameMode"
                         label={t('panel.gameMod')}
                     >
-                        {getDstMod("", archive.gameMod)}
+                        {getDstMod(archive.gameMod)}
                     </ProFormText>
                     <ProFormText
                         colProps={{xs: 12, xl: 12, md: 12}}

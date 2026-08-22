@@ -349,7 +349,7 @@ const Backup = ({showStatistic}) => {
             <div style={{
                 paddingBottom: 12
             }}>
-                <Alert message={`${t('backup.tips.prefix')}${t('backup.tips1')}`} type="info" showIcon/>
+                <Alert message={t('backup.tips1')} type="info" showIcon/>
             </div>
 
             {showStatistic && <BackupStatistic size={backupData.length} data={backupDataSize}/>}

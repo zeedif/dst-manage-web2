@@ -84,7 +84,7 @@ const ModItem2: React.FC<{ modInfo: ModInfo, valueRef: RefObject<string> }> = ({
                                 src={modInfo.img}/>
                             <div style={{paddingLeft: 8}}>
                                 <strong>{modInfo.name}</strong>
-                                <div>{t('modViewer.modId')} {modInfo.modid}</div>
+                                <div>{t('modViewer.modId', {id: modInfo.modid})}</div>
                             </div>
                         </div>
                     </Col>

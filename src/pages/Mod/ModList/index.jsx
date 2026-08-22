@@ -317,7 +317,7 @@ export default ({modList, setModList,defaultConfigOptionsRef, modConfigOptionsRe
                                 backgroundColor: '#00B96B'
                             }}
                             onClick={()=>saveLevelMod()}
-                        >{t('mod.save.to')} {selectedLevel?.levelName || selectedLevel?.uuid || ''}</Button>
+                        >{t('mod.save.to', {name: selectedLevel?.levelName || selectedLevel?.uuid || ''})}</Button>
                     </Space>
                     <br/><br/>
                     <Row gutter={24}>

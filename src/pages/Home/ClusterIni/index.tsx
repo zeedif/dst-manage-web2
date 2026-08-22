@@ -360,7 +360,7 @@ const ClusterIni: React.FC = () => {
                                                         colProps={{ md: 12, xl: 12 }}
                                                         label={t('cluster.cluster_language')}
                                                         name='cluster_language'
-                                                        tooltip={t('cluster.cluster_language')}
+                                                        tooltip={t('cluster.tooltip.cluster_language')}
                                                         placeholder="zh"
                                                     />
                                                 </ProForm>

@@ -142,7 +142,7 @@ const dstGameMod = [
 
 ]
 
-export function getDstMod(lang, name) {
+export function getDstMod(name) {
     let result = name
     dstGameMod.forEach(item=>{
         if (item.name === name) {

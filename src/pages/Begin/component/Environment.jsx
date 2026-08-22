@@ -54,10 +54,10 @@ const Environment = () => {
 
             {!checkLoading && (
                 <div>
-                    <span>{t('begin.environment.os')} {host.os}</span><br /><br />
-                    <span>{t('begin.environment.hostname')} {host.hostname}</span><br /><br />
-                    <span>{t('begin.environment.kernelArch')} {host.kernelArch}</span><br /><br />
-                    <span>{t('begin.environment.platform')} {host.platform}</span><br /><br />
+                    <span>{t('begin.environment.os', {value: host.os})}</span><br /><br />
+                    <span>{t('begin.environment.hostname', {value: host.hostname})}</span><br /><br />
+                    <span>{t('begin.environment.kernelArch', {value: host.kernelArch})}</span><br /><br />
+                    <span>{t('begin.environment.platform', {value: host.platform})}</span><br /><br />
                 </div>
             )
             }

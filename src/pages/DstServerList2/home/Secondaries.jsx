@@ -21,13 +21,13 @@ export default ({secondaries}) => {
                             backgroundColor: '#F0F2F5'
                         }}>
                             <div>
-                                <span>{t('dstServerList.secondaries.worldId')} {secondaries[key].id}</span>
+                                <span>{t('dstServerList.secondaries.worldId', {id: secondaries[key].id})}</span>
                             </div>
                             <div>
-                                <span>{t('dstServerList.secondaries.worldIp')} {secondaries[key].__addr}:{secondaries[key].port}</span>
+                                <span>{t('dstServerList.secondaries.worldIp', {ip: `${secondaries[key].__addr}:${secondaries[key].port}`})}</span>
                             </div>
                             <div>
-                                <span>{t('dstServerList.secondaries.steam')} {secondaries[key].steamid}</span>
+                                <span>{t('dstServerList.secondaries.steam', {id: secondaries[key].steamid})}</span>
                             </div>
                         </Card>
                         <br/>

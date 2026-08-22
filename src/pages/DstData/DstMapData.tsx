@@ -185,7 +185,7 @@ export default () => {
                                     >
                                         {l.levelName} {hasWalrusHutPlainsMap[l.uuid] ? t('dstData.map.hasWalrusPlains') : t('dstData.map.noWalrusPlains')}
                                     </Tag>
-                                    <Tag color={'blue'}>{t('dstData.map.killerBeeCount')} {wasphive}</Tag>
+                                    <Tag color={'blue'}>{t('dstData.map.killerBeeCount', {count: wasphive})}</Tag>
                                 </Space>
                             )
                         ))}
