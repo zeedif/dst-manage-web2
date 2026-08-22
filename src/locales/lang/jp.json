@@ -845,6 +845,8 @@
   "setting.dstConfig.conf_dir.placeholder": "conf_dir",
   "setting.dstConfig.conf_dir.tooltip": "設定ディレクトリの名前を変更します（スラッシュを含めない）\n    ユーザーファイルの完全なパスは\n    <persistent_storage_root>/<conf_dir>/\n    <persistent_storage_root> は -persistent_storage_root で設定される値です\n    デフォルト値: DoNotStarveTogether",
   "setting.dstConfig.dedicatedServerDocs": "Dedicated Serverの設定項目とコマンドライン引数の詳細説明",
+  "setting.dstConfig.dedicatedServerGuide.button": "cluster.ini / server.ini 完全ガイド",
+  "setting.dstConfig.dedicatedServerGuide.title": "完全ガイド：cluster.ini、server.ini とコマンドライン引数",
   "setting.dstConfig.dockerPathReference.button": "Dockerパスマッピングリファレンス",
   "setting.dstConfig.dockerPathReference.title": "Dockerパスリファレンス",
   "setting.dstConfig.docker.backupPath": "コンテナのアーカイブバックアップパス",

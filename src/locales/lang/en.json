@@ -845,6 +845,8 @@
   "setting.dstConfig.conf_dir.placeholder": "conf_dir",
   "setting.dstConfig.conf_dir.tooltip": "Changes the name of the configuration directory, without including slashes\n    The full path to user files is\n    <persistent_storage_root>/<conf_dir>/\n    <persistent_storage_root> is the value set via -persistent_storage_root\n    Default value: DoNotStarveTogether",
   "setting.dstConfig.dedicatedServerDocs": "Dedicated Server configuration and command-line arguments explained",
+  "setting.dstConfig.dedicatedServerGuide.button": "Full cluster.ini / server.ini guide",
+  "setting.dstConfig.dedicatedServerGuide.title": "Full guide: cluster.ini, server.ini and command-line arguments",
   "setting.dstConfig.dockerPathReference.button": "Docker path mapping reference",
   "setting.dstConfig.dockerPathReference.title": "Docker Path Reference",
   "setting.dstConfig.docker.backupPath": "Container archive backup path",

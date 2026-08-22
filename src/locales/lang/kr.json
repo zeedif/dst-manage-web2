@@ -845,6 +845,8 @@
   "setting.dstConfig.conf_dir.placeholder": "conf_dir",
   "setting.dstConfig.conf_dir.tooltip": "설정 디렉터리의 이름을 변경합니다(슬래시 제외)\n    사용자 파일의 전체 경로는\n    <persistent_storage_root>/<conf_dir>/\n    <persistent_storage_root>는 -persistent_storage_root로 설정되는 값입니다\n    기본값: DoNotStarveTogether",
   "setting.dstConfig.dedicatedServerDocs": "Dedicated Server 설정 항목 및 명령줄 인수 상세 설명",
+  "setting.dstConfig.dedicatedServerGuide.button": "cluster.ini / server.ini 전체 가이드",
+  "setting.dstConfig.dedicatedServerGuide.title": "전체 가이드: cluster.ini, server.ini 및 명령줄 인수",
   "setting.dstConfig.dockerPathReference.button": "Docker 경로 매핑 참고",
   "setting.dstConfig.dockerPathReference.title": "Docker 경로 참고",
   "setting.dstConfig.docker.backupPath": "컨테이너 아카이브 백업 경로",

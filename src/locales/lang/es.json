@@ -845,6 +845,8 @@
   "setting.dstConfig.conf_dir.placeholder": "conf_dir",
   "setting.dstConfig.conf_dir.tooltip": "Cambia el nombre del directorio de configuración, sin incluir barras\n    La ruta completa de los archivos de usuario es\n    <persistent_storage_root>/<conf_dir>/\n    <persistent_storage_root> es el valor establecido mediante -persistent_storage_root\n    El valor predeterminado es: DoNotStarveTogether",
   "setting.dstConfig.dedicatedServerDocs": "Explicación de la configuración y los argumentos de línea de comandos del servidor dedicado",
+  "setting.dstConfig.dedicatedServerGuide.button": "Guía completa de cluster.ini / server.ini",
+  "setting.dstConfig.dedicatedServerGuide.title": "Guía completa: cluster.ini, server.ini y argumentos de línea de comandos",
   "setting.dstConfig.dockerPathReference.button": "Referencia de mapeo de rutas de Docker",
   "setting.dstConfig.dockerPathReference.title": "Referencia de rutas de Docker",
   "setting.dstConfig.docker.backupPath": "Ruta de copia de seguridad de la partida en el contenedor",

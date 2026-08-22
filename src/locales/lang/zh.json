@@ -845,6 +845,8 @@
   "setting.dstConfig.conf_dir.placeholder": "conf_dir",
   "setting.dstConfig.conf_dir.tooltip": "更改配置目录的名称，不包含斜杠\n    用户文件的完整路径是\n    <persistent_storage_root>/<conf_dir>/\n    <persistent_storage_root> 是通过 -persistent_storage_root 设置的值\n    默认值为：DoNotStarveTogether",
   "setting.dstConfig.dedicatedServerDocs": "Dedicated Server配置项和命令行参数详解",
+  "setting.dstConfig.dedicatedServerGuide.button": "cluster.ini / server.ini 完整指南",
+  "setting.dstConfig.dedicatedServerGuide.title": "完整指南：cluster.ini、server.ini 与命令行参数",
   "setting.dstConfig.dockerPathReference.button": "docker映射路径参考",
   "setting.dstConfig.dockerPathReference.title": "Docker 路径参考",
   "setting.dstConfig.docker.backupPath": "容器存档备份路径",

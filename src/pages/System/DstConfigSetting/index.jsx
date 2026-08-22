@@ -17,6 +17,7 @@ import {useTranslation} from "react-i18next";
 import i18next from "../../../locales/i18n.tsx";
 
 import {readDstConfigSync, writeDstConfigSync} from "../../../api/dstConfigApi.jsx";
+import MarkdownRender from "../../Help/MarkdownRender.jsx";
 
 const onFinishFailed = (errorInfo) => {
     message.error(i18next.t('setting.dstConfig.save.error'))
@@ -87,6 +88,7 @@ export default () => {
     };
 
     const [open, setOpen] = useState(false);
+    const [guideOpen, setGuideOpen] = useState(false);
 
     return (
         <div>
@@ -129,6 +131,10 @@ export default () => {
                 </Typography>
             </Drawer>
 
+            <Drawer title={t('setting.dstConfig.dedicatedServerGuide.title')} placement="right" width={720} onClose={() => setGuideOpen(false)} open={guideOpen}>
+                <MarkdownRender url={'misc/dst-dedicated-server-guide.es.md'} />
+            </Drawer>
+
                 <Alert style={{marginBottom: '12px'}}
                        message={t('setting.dstConfig.tips1')}
                        type="info" showIcon/>
@@ -157,6 +163,13 @@ export default () => {
                                     onClick={()=>{
                                 setOpen(true)
                             }}>{t('setting.dstConfig.dockerPathReference.button')}</Button>
+                            {lang === 'es' && (
+                                <Button
+                                    size={"small"}
+                                    onClick={()=>{
+                                        setGuideOpen(true)
+                                    }}>{t('setting.dstConfig.dedicatedServerGuide.button')}</Button>
+                            )}
                             <a target={'_blank'} href={'https://steamcommunity.com/sharedfiles/filedetails/?id=1616647350'} rel="noreferrer" >{t('setting.dstConfig.dedicatedServerDocs')}</a>
                         </Space>
                         <br/>
