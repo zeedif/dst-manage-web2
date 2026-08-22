@@ -3,7 +3,7 @@ import {useTranslation} from "react-i18next";
 import {Button, Drawer} from "antd";
 import DstMapData from "../../DstData/DstMapData";
 
-export default ({block})=>{
+export default ({block, style})=>{
     const [open, setOpen] = useState(false);
     const showDrawer = () => {
         setOpen(true);
@@ -15,7 +15,7 @@ export default ({block})=>{
 
     return (
         <>
-            <Button block={block} type="primary" onClick={showDrawer}>{t('panel.mapReviewer')}</Button>
+            <Button block={block} type="primary" onClick={showDrawer} style={style}>{t('panel.mapReviewer')}</Button>
             <Drawer
                 closable={{ placement: 'end' }}
                 title={t('panel.mapData')} onClose={onClose} open={open} width={1200}>

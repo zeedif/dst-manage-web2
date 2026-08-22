@@ -7,8 +7,6 @@ import {Button, Modal, Image, Skeleton, message, ConfigProvider} from 'antd';
 
 import i18n from "i18next";
 import {useTranslation} from "react-i18next";
-import zhCN from "antd/es/locale/zh_CN";
-import enUS from "antd/es/locale/en_US";
 
 
 import {dstHomeListApi, dstHomeDetailApi} from '../../api/dstApi.jsx';
@@ -16,6 +14,7 @@ import {dstHomeListApi, dstHomeDetailApi} from '../../api/dstApi.jsx';
 import HomeDetail from './home/index.jsx';
 
 import style from "./index.module.css"
+import {getAntdLocale} from "../../locales/antdLocale";
 
 
 const PlayerPercentEnum = {
@@ -26,7 +25,7 @@ const PlayerPercentEnum = {
 const DstServerList = () => {
     const {t} = useTranslation()
 
-    const currentLocale = i18n.language.startsWith('zh') ? zhCN : enUS;
+    const currentLocale = getAntdLocale(i18n.language);
 
     const SortWayEnum = {
         1: t('dstServerList.sort.desc'),

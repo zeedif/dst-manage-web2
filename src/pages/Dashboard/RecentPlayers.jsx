@@ -3,22 +3,19 @@ import React, {useEffect, useState} from "react";
 import {useParams} from "react-router-dom";
 import {useTranslation} from "react-i18next";
 
-import locale from 'antd/locale/zh_CN';
 import dayjs from 'dayjs';
-
-import 'dayjs/locale/zh-cn';
 
 import EChartComponent from "./EChartComponent";
 import {countRoleRate} from "../../api/statisticsApi";
 import {getBeginWeek, getEndWeek} from "../../utils/dateUitls";
 import {dstRolesMap} from "../../utils/dst";
-
-dayjs.locale('zh-cn');
+import {getAntdLocale} from "../../locales/antdLocale";
 
 const {RangePicker} = DatePicker;
 
 export default () => {
-    const {t} = useTranslation()
+    const {t, i18n} = useTranslation()
+    const locale = getAntdLocale(i18n.resolvedLanguage)
     const {cluster} = useParams()
     const [loading, setLoading] = useState(true)
     const [chartOptions, setChartOptions] = useState()

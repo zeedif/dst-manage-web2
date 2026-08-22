@@ -47,9 +47,11 @@ export default () => {
             })
     }
 
+    const btnStyle = {height: 'auto', minHeight: 32, whiteSpace: 'normal', lineHeight: 1.4, padding: '4px 12px'}
+
     return <>
         <Row gutter={[16,16]}>
-            <Col xs={12} sm={6} md={6} lg={6} xl={6}>
+            <Col xs={24} sm={12} md={12} lg={6} xl={6}>
                 <Popconfirm
                     title={t('panel.updateGame.confirm.title')}
                     description={t('panel.updateGame.confirm.desc')}
@@ -63,19 +65,20 @@ export default () => {
                         block
                         type="primary"
                         loading={updateGameStatus}
+                        style={btnStyle}
                     >
                         {t('panel.updateGame')}
                     </Button>
                 </Popconfirm>
             </Col>
-            <Col xs={12} sm={6} md={6} lg={6} xl={6}>
-                <CreateBackUpBtn block={true} />
+            <Col xs={24} sm={12} md={12} lg={6} xl={6}>
+                <CreateBackUpBtn block={true} style={btnStyle} />
             </Col>
-            <Col xs={12} sm={6} md={6} lg={6} xl={6}>
-                <ArchiveList block={true} />
+            <Col xs={24} sm={12} md={12} lg={6} xl={6}>
+                <ArchiveList block={true} style={btnStyle} />
             </Col>
-            <Col xs={12} sm={6} md={6} lg={6} xl={6}>
-                <DstMapReviewer block={true} />
+            <Col xs={24} sm={12} md={12} lg={6} xl={6}>
+                <DstMapReviewer block={true} style={btnStyle} />
             </Col>
         </Row>
     </>

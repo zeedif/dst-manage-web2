@@ -5,14 +5,13 @@ import {Button, ConfigProvider, Image, message, Popconfirm, Space, Tag} from 'an
 
 import {useTranslation} from "react-i18next";
 import i18n from "i18next";
-import zhCN from 'antd/es/locale/zh_CN';
-import enUS from 'antd/es/locale/en_US';
 
 import {deleteLogs, getPlayerLog} from '../../api/playerLogApi.jsx';
 import {dstRoles, dstRolesMap} from '../../utils/dst.js';
 import {addBlackListPlayerListApi} from "../../api/playerApi.jsx";
 import style from "../DstServerList2/index.module.css";
 import HiddenText from "../Home/HiddenText/HiddenText";
+import {getAntdLocale} from "../../locales/antdLocale";
 
 
 export default ()=> {
@@ -29,7 +28,7 @@ export default ()=> {
     }
 
     const {cluster} = useParams()
-    const currentLocale = i18n.language.startsWith('zh') ? zhCN : enUS;
+    const currentLocale = getAntdLocale(i18n.language);
 
     const actionRef = useRef();
     const [currentPage, setCurrentPage] = useState(1);
