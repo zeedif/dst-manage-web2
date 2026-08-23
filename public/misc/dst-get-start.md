@@ -3,7 +3,7 @@
 ## Windows 部署教程
 查看bilibili，一键三连！👍💬🌟
 
-<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=115444711163259&bvid=BV1Jas2z5Ezs&cid=33433978928&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true">
+<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=115444711163259&bvid=BV1Jas2z5Ezs&cid=33433978928&p=1&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true">
 </iframe>
 
 ## Linux 部署教程

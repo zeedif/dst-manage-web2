@@ -138,6 +138,11 @@ export default () => {
                 <Alert style={{marginBottom: '12px'}}
                        message={t('setting.dstConfig.tips1')}
                        type="info" showIcon/>
+                {data.container_mode && (
+                    <Alert style={{marginBottom: '12px'}}
+                           message={t('setting.dstConfig.containerMode.tips')}
+                           type="warning" showIcon/>
+                )}
                 <Form
                     onFinish={onFinish}
                     onFinishFailed={onFinishFailed}
@@ -183,7 +188,7 @@ export default () => {
                                 },
                             ]}
                         >
-                            <Input/>
+                            <Input disabled={data.container_mode}/>
                         </Form.Item>
                         <Form.Item
                             label={t('setting.dstConfig.force_install_dir')}
@@ -195,7 +200,7 @@ export default () => {
                                 },
                             ]}
                         >
-                            <Input/>
+                            <Input disabled={data.container_mode}/>
                         </Form.Item>
                         <Form.Item
                             label={t('setting.dstConfig.backup')}
@@ -234,7 +239,7 @@ export default () => {
                             ]}
                             tooltip={t('setting.dstConfig.cluster.tooltip')}
                         >
-                            <Input placeholder={t('setting.dstConfig.cluster.placeholder')}/>
+                            <Input placeholder={t('setting.dstConfig.cluster.placeholder')} disabled={data.container_mode}/>
                         </Form.Item>
                         {activeTab === 'custom' && <div>
                             <Form.Item

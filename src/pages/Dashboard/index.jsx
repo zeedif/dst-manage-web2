@@ -20,7 +20,7 @@ const {RangePicker} = DatePicker;
 export default () => {
 
     const {t} = useTranslation()
-    const currentLocale = getAntdLocale(i18n.language);
+    const currentLocale = getAntdLocale(i18n.resolvedLanguage);
     const {cluster} = useParams()
 
     const today = dayjs();

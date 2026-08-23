@@ -2,7 +2,7 @@
 
 import React, {useState} from 'react';
 
-import {ProTable} from '@ant-design/pro-components';
+import {ProConfigProvider, ProTable} from '@ant-design/pro-components';
 import {Button, Modal, Image, Skeleton, message, ConfigProvider} from 'antd';
 
 import i18n from "i18next";
@@ -14,7 +14,7 @@ import {dstHomeListApi, dstHomeDetailApi} from '../../api/dstApi.jsx';
 import HomeDetail from './home/index.jsx';
 
 import style from "./index.module.css"
-import {getAntdLocale} from "../../locales/antdLocale";
+import {getAntdLocale, getProIntl} from "../../locales/antdLocale";
 
 
 const PlayerPercentEnum = {
@@ -25,7 +25,7 @@ const PlayerPercentEnum = {
 const DstServerList = () => {
     const {t} = useTranslation()
 
-    const currentLocale = getAntdLocale(i18n.language);
+    const currentLocale = getAntdLocale(i18n.resolvedLanguage);
 
     const SortWayEnum = {
         1: t('dstServerList.sort.desc'),
@@ -290,6 +290,7 @@ const DstServerList = () => {
 
     return (
         <ConfigProvider locale={currentLocale}>
+        <ProConfigProvider intl={getProIntl(i18n.resolvedLanguage)}>
             <>
                 <Modal
                     getContainer={false}
@@ -341,6 +342,7 @@ const DstServerList = () => {
                     tableAlertRender={({selectedRowKeys, selectedRows, onCleanSelected}) => false}
                 />
             </>
+        </ProConfigProvider>
         </ConfigProvider>
     );
 

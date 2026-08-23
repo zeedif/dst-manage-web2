@@ -1,6 +1,6 @@
 import {useParams} from "react-router-dom";
 import React, {useRef, useState} from 'react';
-import {ProTable} from '@ant-design/pro-components';
+import {ProConfigProvider, ProTable} from '@ant-design/pro-components';
 import {Button, ConfigProvider, Image, message, Popconfirm, Space, Tag} from 'antd';
 
 import {useTranslation} from "react-i18next";
@@ -11,7 +11,7 @@ import {dstRoles, dstRolesMap} from '../../utils/dst.js';
 import {addBlackListPlayerListApi} from "../../api/playerApi.jsx";
 import style from "../DstServerList2/index.module.css";
 import HiddenText from "../Home/HiddenText/HiddenText";
-import {getAntdLocale} from "../../locales/antdLocale";
+import {getAntdLocale, getProIntl} from "../../locales/antdLocale";
 
 
 export default ()=> {
@@ -28,7 +28,7 @@ export default ()=> {
     }
 
     const {cluster} = useParams()
-    const currentLocale = getAntdLocale(i18n.language);
+    const currentLocale = getAntdLocale(i18n.resolvedLanguage);
 
     const actionRef = useRef();
     const [currentPage, setCurrentPage] = useState(1);
@@ -168,6 +168,7 @@ export default ()=> {
     return (
         <>
             <ConfigProvider locale={currentLocale}>
+                        <ProConfigProvider intl={getProIntl(i18n.resolvedLanguage)}>
                             <ProTable
                                 scroll={{
                                     x: 500,
@@ -211,6 +212,7 @@ export default ()=> {
                                     </Button>
                                 ]}
                             />
+                        </ProConfigProvider>
             </ConfigProvider>
         </>
     )

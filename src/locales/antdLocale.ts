@@ -9,6 +9,7 @@ import 'dayjs/locale/en';
 import 'dayjs/locale/ja';
 import 'dayjs/locale/ko';
 import 'dayjs/locale/es';
+import {enUSIntl, jaJPIntl, koKRIntl, esESIntl, zhCNIntl} from '@ant-design/pro-components';
 
 // Maps this app's i18next language codes to antd's own locale objects, so
 // antd/pro-components built-in strings (default placeholders, pagination,
@@ -36,4 +37,22 @@ export function getAntdLocale(language: string) {
 
 export function syncDayjsLocale(language: string) {
     dayjs.locale(dayjsLocales[language as keyof typeof dayjsLocales] || 'en');
+}
+
+// pro-components (ProTable/ProForm search forms, etc.) resolves its own
+// built-in strings (placeholders, reset/search button text) through a
+// separate ProConfigProvider "intl" context rather than antd's own
+// ConfigProvider locale. Pages that render pro-components outside of
+// ProLayout's own ProConfigProvider need to pass this explicitly -- see
+// getProIntl usage in PlayerLog/Dashboard/DstServerList.
+const proIntls = {
+    zh: zhCNIntl,
+    en: enUSIntl,
+    jp: jaJPIntl,
+    kr: koKRIntl,
+    es: esESIntl,
+};
+
+export function getProIntl(language: string) {
+    return proIntls[language as keyof typeof proIntls] || enUSIntl;
 }

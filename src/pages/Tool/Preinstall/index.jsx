@@ -75,7 +75,8 @@ export default ({reload}) => {
                                                             size="large"
                                                         />
                                                     }
-                                                    title={item.name} description={item.description}
+                                                    title={item.key ? t(`tool.preinstall.preset.${item.key}.name`) : item.name}
+                                                    description={item.key ? t(`tool.preinstall.preset.${item.key}.description`) : item.description}
                                                     value={item.value}/>
                                             </div>
                                         </Col>
